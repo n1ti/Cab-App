@@ -4,57 +4,71 @@
     background: #F1DDBF;
     font-family: 'Inter', sans-serif;
     font-style: sans-serif;
-    /* outline: 1px solid red; */
+    /* outline: 1px solid red;  */
   }
 
-  .maintext
-  {
-    position: absolute;
-    width: 690px;
-    height: 157px;
-    left: 86px;
-    top: 333px;
+.container{
+    position: relative;
+    top: 13.16%;
+    padding-left: 3%;
+    display: flexbox;
+    flex-direction: row;
+} 
+.maintext{
+    position: relative;
+    width: 60%;
+    height: 17.8%;
+    display: flexbox;
+    top: 21.65%;
     text-align: left;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
-
+    font-size: 3.8vw;
     color: #342D43;
-  }
+}
 
-  .subtext
-  {
-    position: absolute;
-    width: 636px;
-    height: 50px;
-    left: 86px;
-    top: 512px;
+.subtext{
+    position: relative;
+    width: 60%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     text-align: left;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-
+    display: flexbox;
+    font-size: 1.7vw;
     color: #342D43;
-  }
+}
 
-  .getstartedB {
+.getstartedB {
     background: #342D43;
     transition-duration: 0.3s;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.8vw;
+    align-items: left;
     display: flex;
-    align-items: center;
     text-align: center;
     color: #FFB668;
-    position: absolute;
-    width: 252px;
-    height: 75px;
-    left: 86px;
-    top: 629px;
+    position: relative;
+    width: 25%;
+    height: 20%;
+    top: 20%;
     border-radius: 20px;
-  }
-  .getstartedB:hover:enabled {
+}
+.getstartedB:hover:enabled {
     background-color: #FFB668;
     border: 2px solid #342D43;
     color: #342D43;
-  }
+}
+
+.image{
+    position: relative;
+    display: flexbox;
+    width: 60%;
+    height: 40%;
+    left: 30%;
+    top: 10%;
+    mix-blend-mode: multiply;
+}
+
+.car{
+    mix-blend-mode: multiply;
+}
