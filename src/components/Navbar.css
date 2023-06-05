@@ -1,0 +1,8 @@
+.logo-position {
+    position: fixed;
+    top: 10px;
+}
+.gedi-navbar {
+    position: fixed;
+    width: 100vw;
+}
