@@ -11,29 +11,34 @@
     position: relative;
     top: 13.16%;
     padding-left: 3%;
-    display: flexbox;
+    display: flex;
     flex-direction: row;
+    padding: 7rem;
 } 
+.maintext-container {
+    display: flex;
+    flex-direction: column;
+}
 .maintext{
-    position: relative;
+    /* position: relative; */
     width: 60%;
-    height: 17.8%;
-    display: flexbox;
+    height: 100%;
+    display: flex;
     top: 21.65%;
     text-align: left;
     font-weight: 700;
-    font-size: 3.8vw;
+    font-size: 2.8vw;
     color: #342D43;
 }
 
 .subtext{
-    position: relative;
+    /* position: relative; */
     width: 60%;
     padding-top: 5%;
     padding-bottom: 5%;
     text-align: left;
     font-weight: 400;
-    display: flexbox;
+    display: flex;
     font-size: 1.7vw;
     color: #342D43;
 }
@@ -47,9 +52,9 @@
     display: flex;
     text-align: center;
     color: #FFB668;
-    position: relative;
+    /* position: relative; */
     width: 25%;
-    height: 20%;
+    height: 100%;
     top: 20%;
     border-radius: 20px;
 }
