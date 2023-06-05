@@ -59,16 +59,3 @@
     color: #342D43;
 }
 
-.image{
-    position: relative;
-    display: flexbox;
-    width: 60%;
-    height: 40%;
-    left: 30%;
-    top: 10%;
-    mix-blend-mode: multiply;
-}
-
-.car{
-    mix-blend-mode: multiply;
-}
