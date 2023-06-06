@@ -1,0 +1,19 @@
+.car{
+    align-items: center;
+    /* padding-top: 69px; */
+    height: fit-content;
+    width: fit-content;
+    /* padding-left: 100px; */
+}
+
+.caro{
+    width: 1000px;
+    height: auto;
+    align-items: baseline;
+    align-content: center;
+    padding-top: 75px;
+}
+
+.btnn{
+    background-color: white;
+}
