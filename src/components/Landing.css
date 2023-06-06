@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
 
 * {
     padding: 0;
@@ -82,7 +83,42 @@ border-radius: 20px;
 
 .car{
     align-items: center;
-    padding-top: 69px;
+    /* padding-top: 69px; */
     height: fit-content;
-    width: 500px;
+    width: fit-content;
+    /* padding-left: 100px; */
+}
+
+.caro{
+    width: 1000px;
+    height: auto;
+    align-items: baseline;
+    align-content: center;
+    padding-top: 75px;
+}
+
+.foot{
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    /* background: rgba(255, 182, 104, 0.3); */
+    background-color: #f4d0a3;
+    
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.float-container {
+    /* border: 3px solid #fff; */
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 0px;
+    /* border: 2px solid red; */
 }
