@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     padding: 0;
     margin: 0;
@@ -21,20 +25,22 @@
 }
 .maintext{
     /* position: relative; */
-    width: 60%;
-    height: 100%;
+    width: auto;
+    height: auto;
     display: flex;
-    top: 21.65%;
+    /* top: 21.65%; */
     text-align: left;
     font-weight: 700;
     font-size: 2.8vw;
+    padding-top: 30px;
     color: #342D43;
+    padding-top: 69px;
 }
 
 .subtext{
     /* position: relative; */
-    width: 60%;
-    padding-top: 5%;
+    width: auto;
+    padding-top: 30px;
     padding-bottom: 5%;
     text-align: left;
     font-weight: 400;
@@ -53,8 +59,12 @@
     text-align: center;
     color: #FFB668;
     /* position: relative; */
-    width: 25%;
-    height: 100%;
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     top: 20%;
     border-radius: 20px;
 }
@@ -64,3 +74,15 @@
     color: #342D43;
 }
 
+.get-started-btn{
+
+
+border-radius: 20px;
+}
+
+.car{
+    align-items: center;
+    padding-top: 69px;
+    height: fit-content;
+    width: 500px;
+}
