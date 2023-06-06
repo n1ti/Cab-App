@@ -1,8 +1,7 @@
-import "./Login.css";
+import "./login.css";
 import React from "react";
 import Car from "../assets/car.svg";
 import glogo from "../assets/glogo.svg"
-import GoogleButton from 'react-google-button'
 
 
 const Login = () => {
@@ -11,19 +10,18 @@ const Login = () => {
         <div className="float container">
             <div className="float-child">
                 <div className="car">
-                    <img src={Car} className="caro" />   </div>
+                    <img src={Car} className="caro" />   
+                </div>
             </div>
-
-            <div>
-
-                <GoogleButton className="btnn"
-                    onClick={() => { console.log('Google button clicked') }}
-                />
-
+            <div className="float-child">
+                <button className="google-button"></button>
+                    <hr className="line1" />
+                    <p className="or-features">or</p>
+                    <hr className="line2" />
+                
+                
+                <button className="apple-button"></button>
             </div>
-
-
-
         </div>
     );
 };
