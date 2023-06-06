@@ -27,7 +27,7 @@ const Landing = () => {
                 <div className="maintext"><p>One stop solution to manage <br></br> your Cabs and Drivers.</p></div>
                 <div className="subtext"><p>At GEDI, we are dedicated to providing you with a comprehensive solution to streamline your cab and driver operations.</p></div>
                 <div className="get-started-btn">
-                    <button className="getstartedB">G E T &nbsp; S T A R T E D !</button>
+                    <a href="/login"><button className="getstartedB" >G E T &nbsp; S T A R T E D !</button></a>
                 </div>
             </div>
             <div className="float-child">
