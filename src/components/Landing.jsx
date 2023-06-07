@@ -31,8 +31,8 @@ const Landing = () => {
                 </div>
             </div>
             <div className="float-child">
-                <div className="car">
-                    <img src={Car} className="caro" />   </div>
+                <div className="cark">
+                    <img src={Car} className="carok" />   </div>
             </div>
 
         </div>
