@@ -87,6 +87,7 @@ border-radius: 20px;
     height: fit-content;
     width: fit-content;
     /* padding-left: 100px; */
+    transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .caro{
@@ -95,6 +96,7 @@ border-radius: 20px;
     align-items: baseline;
     align-content: center;
     padding-top: 75px;
+
 }
 
 .foot{

@@ -28,7 +28,7 @@ const provider = new GoogleAuthProvider();
 
 export const signInWithGogle = () => {
     signInWithPopup(auth, provider).then((result) => {
-        console.log(result);
+        window.location.href = "./adminDash";
     }).catch((error)=>{
         console.log(error);
     })
