@@ -7,6 +7,7 @@ import Login from "./components/login.jsx";
 import AdminDash from './components/AdminDash.jsx';
 import DriverDeets from './components/DriverDeets.jsx';
 import CabDeets from './components/CabDeets.jsx'
+import Dashboard from './components/Dashboard.jsx';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/adminDash" element={<AdminDash />} />
           <Route path="/driverDeets" element={<DriverDeets />} />
           <Route path="/cabDeets" element={<CabDeets />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
       <Footer />
