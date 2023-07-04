@@ -12,6 +12,8 @@ export default {
       'navbar': "#FFB668"
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 
