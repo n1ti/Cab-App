@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
 
 * {
     padding: 0;
@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: row;
     padding: 7rem;
+    height: 100vh;
 } 
 .maintext-container {
     display: flex;
@@ -100,13 +101,11 @@ border-radius: 20px;
 }
 
 .foot{
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    /* bottom: 0; */
     height: auto;
     width: 100%;
-    /* background: rgba(255, 182, 104, 0.3); */
     background-color: #f4d0a3;
-    
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;

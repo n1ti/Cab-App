@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
+
+.driver-registration-container {
+    background-image: url('gridbackground.svg');
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+.driver-details-form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1.3rem 3rem 2rem 3rem;
+    width: 612px;
+    height: 100%;
+    margin-top: 8rem;
+    background-color: rgba(120, 147, 138, 0.3);
+    font-family: 'Lexend', sans-serif;
+}
+.driver-details-form > input {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #2E436B;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.driver-details-form > label {
+    font-family: 'Lexend', sans-serif;
+    background-color: transparent;
+    font-weight: 700;
+    align-self: flex-start;
+    margin: 0.3rem;
+    color: #2E436B;
+}
+.driver-details-form > h1 {
+    font-weight: 700;
+    font-family: 'Lexend', sans-serif;
+    font-size: 2.5rem;
+    background-color: transparent;
+    color: #2E436B;
+    margin-bottom: 0.7rem;
+}
+.driver-details-form > button {
+    background-color: #78938A;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
