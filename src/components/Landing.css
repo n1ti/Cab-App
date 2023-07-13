@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    background: #F1DDBF;
+    font-family: 'Inter', sans-serif;
+    font-style: sans-serif;
+    /* outline: 1px solid red;  */
+  }
+
+.container{
+    position: relative;
+    top: 13.16%;
+    padding-left: 3%;
+    display: flex;
+    flex-direction: row;
+    padding: 7rem;
+    height: 100vh;
+} 
+.maintext-container {
+    display: flex;
+    flex-direction: column;
+}
+.maintext{
+    /* position: relative; */
+    width: auto;
+    height: auto;
+    display: flex;
+    /* top: 21.65%; */
+    text-align: left;
+    font-weight: 700;
+    font-size: 2.8vw;
+    padding-top: 30px;
+    color: #342D43;
+    padding-top: 69px;
+}
+
+.subtext{
+    /* position: relative; */
+    width: auto;
+    padding-top: 30px;
+    padding-bottom: 5%;
+    text-align: left;
+    font-weight: 400;
+    display: flex;
+    font-size: 1.7vw;
+    color: #342D43;
+}
+
+.getstartedB {
+    background: #342D43;
+    transition-duration: 0.3s;
+    font-weight: 700;
+    font-size: 1.8vw;
+    align-items: left;
+    display: flex;
+    text-align: center;
+    color: #FFB668;
+    /* position: relative; */
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    top: 20%;
+    border-radius: 20px;
+}
+.getstartedB:hover:enabled {
+    background-color: #FFB668;
+    border: 2px solid #342D43;
+    color: #342D43;
+}
+
+.get-started-btn{
+
+
+border-radius: 20px;
+}
+
+.car{
+    align-items: center;
+    /* padding-top: 69px; */
+    height: fit-content;
+    width: fit-content;
+    /* padding-left: 100px; */
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.caro{
+    width: 1000px;
+    height: auto;
+    align-items: baseline;
+    align-content: center;
+    padding-top: 75px;
+
+}
+
+.foot{
+    /* position: absolute; */
+    /* bottom: 0; */
+    height: auto;
+    width: 100%;
+    background-color: #f4d0a3;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.float-container {
+    /* border: 3px solid #fff; */
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 0px;
+    /* border: 2px solid red; */
+}
+

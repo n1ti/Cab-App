@@ -1,0 +1,32 @@
+.deetsB {
+    background: #342D43;
+    transition-duration: 0.3s;
+    font-weight: 700;
+    font-size: 1.8vw;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: #FFB668;
+    /* position: relative; */
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    top: 20%;
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-top: 200px;
+}
+.deetsB:hover:enabled {
+    background-color: #FFB668;
+    border: 2px solid #342D43;
+    color: #342D43;
+}
+
+.deets-btn{
+
+
+border-radius: 20px;
+}
