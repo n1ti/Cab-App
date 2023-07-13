@@ -1,0 +1,116 @@
+* {
+  background-color: #f1ddbf;
+  /* outline: 1px solid red; */
+}
+
+.heading {
+  display: inline-block;
+  color: #2e436b;
+  font-family: Lexend;
+  font-size: 2.5vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-left: 2%;
+  padding-top: 1%;
+  height: fit-content;
+  width: fit-content;
+}
+
+.addDriver {
+  display: inline-block;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  vertical-align: middle;
+  background-color: #78938a;
+  height: 1.7vw;
+  width: 7vw;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-family: Lexend;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.7vw;
+}
+
+.addDriver:active {
+  background-color: #fff;
+  border: 2px solid #78938a;
+  color: #78938a;
+  text-align: center;
+  line-height: 1.7vw;
+}
+
+.databasetable {
+  margin-left: 2%;
+  margin-top: 1%;
+  margin-right: 2%;
+  height: 72vh;
+  border: 5px solid #78938a;
+  background: #f1ddbf;
+}
+
+.tableheader {
+  background: rgba(120, 147, 138, 0.7);
+  height: 4vw;
+  color: #fff;
+  font-family: Lexend;
+  font-size: 1.4vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+}
+.tablerows {
+  background-color: #f6f3ed;
+  height: 4vw;
+  color: #2e436b;
+  font-family: Lexend;
+  font-size: 1.25vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+}
+.ID {
+  width: 12%;
+  padding-left: 2%;
+}
+.fname {
+  width: 13%;
+}
+.lname {
+  width: 17%;
+}
+.phn {
+  width: 15%;
+}
+.emailid {
+  width: 22%;
+}
+.status {
+  width: 12%;
+}
+.op {
+  padding-right: 5%;
+  width: 9%;
+}
+.rowProperties {
+  width: 100%;
+}
+
+.icons {
+  display: table-cell;
+}
+
+.icons2 {
+  background-color: #f6f3ed;
+}
+
+.datarowoutlines {
+  border: 1px solid #78938a;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}

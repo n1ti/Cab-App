@@ -9,7 +9,7 @@ import DriverDeets from './components/DriverDeets.jsx';
 import CabDeets from './components/CabDeets.jsx'
 import DriverRegistration from './components/DriverRegistration.jsx';
 import Dashboard from './components/Dashboard.jsx';
-
+import DriverDatabase from './components/DriverDatabase.jsx';
 
 const App = () => {
   return (
@@ -24,6 +24,7 @@ const App = () => {
           <Route path="/cabDeets" element={<CabDeets />} />
           <Route path="/registerDriver" element={<DriverRegistration/>} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/driver-database" element={<DriverDatabase />} />
         </Routes>
       </Router>
       <Footer />
