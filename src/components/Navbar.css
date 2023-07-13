@@ -1,4 +1,4 @@
-.logo-position {
+/* .logo-position {
     position: fixed;
     top: 10px;
 }
@@ -6,4 +6,16 @@
     position: fixed;
     width: 100vw;
     z-index: 1;
+} */
+
+.logo{
+    height: 4vw;
+    padding-left: 3%;
+    padding-top: 0.7%;
+    width: auto;
+    background-color: #FFB668;
+}
+.bar{
+    background-color: #FFB668;
+    height: 5vw;
 }
