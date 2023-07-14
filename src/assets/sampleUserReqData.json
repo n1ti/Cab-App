@@ -1,0 +1,8 @@
+{
+  "userinfo": [
+    { "tripid": 1221, "cname": "Niti", "driverid": 122203, "cabid": 12093 },
+    { "tripid": 1222, "cname": "iti", "driverid": 72223, "cabid": 82093 },
+    { "tripid": 1223, "cname": "titi", "driverid": 12503, "cabid": 62093 },
+    { "tripid": 1224, "cname": "tini", "driverid": 34203, "cabid": 72093 }
+  ]
+}

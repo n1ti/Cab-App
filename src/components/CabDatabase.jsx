@@ -67,7 +67,7 @@ function CabDatabase() {
             </a>
           </div>
         </div>
-        <div className="databasetable">
+        <div className="databasetable datarows">
           <table className="rowProperties">
             <thead>
               <tr>
@@ -75,7 +75,9 @@ function CabDatabase() {
                 <th className="tableheader carBrand">Cab Brand</th>
                 <th className="tableheader carCapacity">Cab Capacity</th>
                 <th className="tableheader carModel">Cab Model</th>
-                <th className="tableheader registrationNumber">License Plate</th>
+                <th className="tableheader registrationNumber">
+                  License Plate
+                </th>
                 <th className="tableheader status">Status</th>
                 <th className="tableheader op">Operation</th>
               </tr>
