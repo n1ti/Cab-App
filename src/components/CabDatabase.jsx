@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar.jsx";
 import CabDataLine from "./CabDataLine.jsx";
 import "./CabDatabase.css";
+import { Link } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { firebaseConfig } from "../firebase.js";

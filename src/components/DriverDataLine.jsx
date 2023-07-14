@@ -11,7 +11,13 @@ function DriverDataLine(props) {
       <td className="tablerows lname">{props.lastname}</td>
       <td className="tablerows phn">{props.phonenumber}</td>
       <td className="tablerows emailid">{props.emailid}</td>
-      <td className="tablerows status">{props.status}</td>
+      <td className="tablerows status">
+        {props.status == 1 ? (
+          <div className="activeBtn">Active</div>
+        ) : (
+          <div className="inactiveBtn">Inactive</div>
+        )}
+      </td>
       <td className="tablerows op">
         <div>
           <div className="icons">
