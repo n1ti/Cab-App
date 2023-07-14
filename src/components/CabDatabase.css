@@ -76,21 +76,33 @@
     line-height: normal;
     text-align: center;
   }
+
+  /* <th className="tableheader ID">Cab ID</th>
+  <th className="tableheader carBrand">Cab Brand</th>
+  <th className="tableheader carCapacity">Cab Capacity</th>
+  <th className="tableheader carModel">Cab Model</th>
+  <th className="tableheader registrationNumber">Lisence Plate</th>
+  <th className="tableheader status">Status</th>
+  <th className="tableheader op">Operation</th> */
+
   .ID {
     width: 12%;
     padding-left: 2%;
   }
-  .Model {
+  .carBrand {
     width: 13%;
   }
-  .LisencePlate {
+  .carCapacity {
     width: 17%;
   }
-  .Colour {
+  .carModel {
     width: 15%;
   }
   .status {
     width: 12%;
+  }
+  .registraionNumber{
+    width: 10%;
   }
   .op {
     padding-right: 5%;

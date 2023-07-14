@@ -5,13 +5,13 @@ import "./CabDatabase.css";
 
 function CabDataLine(props) {
   return (
-    // <div className="rowProperties">
     <tr className="datarowoutlines">
-      <td className="tablerows ID">{props.id}</td>
-      <td className="tablerows Model">{props.Model}</td>
-      <td className="tablerows Colour">{props.Colour}</td>
-      <td className="tablerows LisencePlate">{props.LisencePlate}</td>
-      {/* <td className="tablerows status">{props.status}</td> */}
+      <td className="tablerows ID">{props.carId}</td>
+      <td className="tablerows carBrand">{props.carBrand}</td>
+      <td className="tablerows carCapacity">{props.carCapacity}</td>
+      <td className="tablerows carModel">{props.carModel}</td>
+      <td className="tablerows registrationNumber">{props.registrationNumber}</td>
+      {/* <td className="tablerows status">{props.registerationDate}</td> {/* Update the prop name here */} */}
       <td className="tablerows status">
         {props.status == 1 ? (
           <div className="activeBtn">Active</div>
@@ -22,15 +22,14 @@ function CabDataLine(props) {
       <td className="tablerows op">
         <div>
           <div className="icons">
-            <img src={EditProfileIcon} className="icons2" />
+            <img src={EditProfileIcon} className="icons2" alt="Edit" />
           </div>
           <div className="icons">
-            <img src={DeleteIcon} className="icons2" />
+            <img src={DeleteIcon} className="icons2" alt="Delete" />
           </div>
         </div>
       </td>
     </tr>
-    // </div>
   );
 }
 
