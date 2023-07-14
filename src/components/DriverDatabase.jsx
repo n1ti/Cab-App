@@ -1,58 +1,91 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar.jsx";
 import DriverDataLine from "./DriverDataLine.jsx";
-import DriverData from "../assets/sampledriverdata.json";
 import "./DriverDatabase.css";
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { firebaseConfig } from "../firebase.js";
 
 function DriverDatabase() {
-  const driverdetails = DriverData["driver"];
+  const [driverdetails, setDriverDetails] = useState([]);
 
-  function CreateDriverFile(driverlist, index) {
+  useEffect(() => {
+    initializeApp(firebaseConfig);
+
+    const fetchData = async () => {
+      const db = getFirestore();
+      const colRef = collection(db, "drivers");
+
+      try {
+        const snapshot = await getDocs(colRef);
+        const drivers = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setDriverDetails(drivers);
+      } catch (error) {
+        console.log("Error getting documents: ", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  function CreateDriverFile(driver, index) {
+    const {
+      id,
+      firstName,
+      lastName,
+      phoneNumber,
+      emailId,
+      registerationDate,
+      driverId,
+    } = driver;
+  
     return (
       <DriverDataLine
         key={index}
-        id={driverlist[0]}
-        firstname={driverlist[1]}
-        lastname={driverlist[2]}
-        phonenumber={driverlist[3]}
-        emailid={driverlist[4]}
-        status={driverlist[5]}
+        id={driverId}
+        firstname={firstName}
+        lastname={lastName}
+        phonenumber={phoneNumber}
+        emailid={emailId}
+        status={registerationDate}
       />
     );
   }
 
   return (
     <div>
-      <Sidebar /> 
-    <div className="page">
-      
-      <div>
-        <div className="heading">DRIVER DATABASE</div>
-        <div className="addDriver">
-        <a href="/registerDriver"><button>Add Driver</button>{" "}</a>
+      <Sidebar />
+      <div className="page">
+        <div>
+          <div className="heading">DRIVER DATABASE</div>
+          <div className="addDriver">
+            <a href="/registerDriver">
+              <button>Add Driver</button>{" "}
+            </a>
+          </div>
+        </div>
+        <div className="databasetable">
+          <table className="rowProperties">
+            <thead>
+              <tr>
+                <th className="tableheader ID">Driver ID</th>
+                <th className="tableheader fname">First Name</th>
+                <th className="tableheader lname">Last Name</th>
+                <th className="tableheader phn">Phone Number</th>
+                <th className="tableheader emailid">Email ID</th>
+                <th className="tableheader status">Status</th>
+                <th className="tableheader op">Operation</th>
+              </tr>
+            </thead>
+            <tbody>{driverdetails.map(CreateDriverFile)}</tbody>
+          </table>
         </div>
       </div>
-      <div className="databasetable">
-        <table className="rowProperties">
-          <thead>
-            <tr>
-              <th className="tableheader ID">Driver ID </th>
-              <th className="tableheader fname">First Name</th>
-              <th className="tableheader lname">Last Name</th>
-              <th className="tableheader phn">Phone Number</th>
-              <th className="tableheader emailid">Email ID</th>
-              <th className="tableheader status">Status</th>
-              <th className="tableheader op">Operation</th>
-            </tr>
-          </thead>
-          <tbody>{driverdetails.map(CreateDriverFile)}</tbody>
-        </table>
-      </div>
     </div>
-    </div>
-    
   );
 }
 
 export default DriverDatabase;
-

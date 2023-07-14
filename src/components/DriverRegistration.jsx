@@ -4,6 +4,7 @@ import { collection, addDoc } from "firebase/firestore";
 import "./driverRegistration.css";
 import { useState, useEffect } from "react";
 
+
 /*
 ************TODO************
 1. Check if user is already registered through registered phone number.
@@ -13,7 +14,6 @@ import { useState, useEffect } from "react";
 5. Transfer this code to the dashboard section.
 ****************************
 */
-
 
 
 
@@ -28,7 +28,7 @@ const DriverRegistration = () => {
     e.preventDefault();
     if(firstName !== "" && lastName !== "" && phoneNumber !== "" && emailId !== "" && driverId !== "") {
       let currentdate = new Date();
-      await addDoc(collection(db, "todos"), {
+      await addDoc(collection(db, "drivers"), {
         firstName,
         lastName,
         phoneNumber,
