@@ -11,7 +11,14 @@ function CabDataLine(props) {
       <td className="tablerows Model">{props.Model}</td>
       <td className="tablerows Colour">{props.Colour}</td>
       <td className="tablerows LisencePlate">{props.LisencePlate}</td>
-      <td className="tablerows status">{props.status}</td>
+      {/* <td className="tablerows status">{props.status}</td> */}
+      <td className="tablerows status">
+        {props.status == 1 ? (
+          <div className="activeBtn">Active</div>
+        ) : (
+          <div className="inactiveBtn">Inactive</div>
+        )}
+      </td>
       <td className="tablerows op">
         <div>
           <div className="icons">
