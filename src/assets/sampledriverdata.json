@@ -1,5 +1,4 @@
 {
-    "totalDrivers": 5,
     "driver":[["id", "firstname", "lastname", "phonenumber", "emailID", "status"],
                 [42000, "Niti", "Shyamsukha", "987654321", "niti@gmail.com", "1"],
                 [42001, "Pratham", "Bhonge", "987654322", "nitisproperty@gmail.com", "0"],

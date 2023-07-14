@@ -1,6 +1,7 @@
 .page {
   background-color: #f1ddbf;
   padding-left: 65px;
+  position: relative;
   /* outline: 1px solid red; */
 }
 
