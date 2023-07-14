@@ -21,8 +21,8 @@ const Landing = () => {
         //     <img src={Car} className="car" />
         //   </div>
         // </div>
-
-        <div className="float container">
+        <div className="page">
+            <div className="float container">
             <div class="float-child">
                 <div className="maintext"><p>One stop solution to manage <br></br> your Cabs and Drivers.</p></div>
                 <div className="subtext"><p>At GEDI, we are dedicated to providing you with a comprehensive solution to streamline your cab and driver operations.</p></div>
@@ -36,6 +36,8 @@ const Landing = () => {
             </div>
 
         </div>
+        </div>
+        
     );
 };
 

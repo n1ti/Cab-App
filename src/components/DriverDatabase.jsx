@@ -1,12 +1,12 @@
+import React from "react";
 import Sidebar from "./Sidebar.jsx";
-//import Navbar from "./Navbar.jsx";
 import DriverDataLine from "./DriverDataLine.jsx";
 import DriverData from "../assets/sampledriverdata.json";
 import "./DriverDatabase.css";
 
 function DriverDatabase() {
   const driverdetails = DriverData["driver"];
-  //   function to render each Memory Line
+
   function CreateDriverFile(driverlist, index) {
     return (
       <DriverDataLine
@@ -20,19 +20,18 @@ function DriverDatabase() {
       />
     );
   }
+
   return (
     <div>
-      {/* <Navbar /> */}
-      <Sidebar />
-
-      {/* <div>{Object.keys(driverdetails).map(CreateDriverFile)}</div> */}
+      <Sidebar /> 
+    <div className="page">
+      
       <div>
         <div className="heading">DRIVER DATABASE</div>
         <div className="addDriver">
-          <button>Add Driver</button>{" "}
+        <a href="/registerDriver"><button>Add Driver</button>{" "}</a>
         </div>
       </div>
-
       <div className="databasetable">
         <table className="rowProperties">
           <thead>
@@ -46,21 +45,12 @@ function DriverDatabase() {
               <th className="tableheader op">Operation</th>
             </tr>
           </thead>
-          <tbody>
-            {/* <DriverDataLine
-              key={1}
-              id={21}
-              firstname={"ni"}
-              lastname={"shyamsukha "}
-              phonenumber={999}
-              emailid={"yo"}
-              status={1}
-            /> */}
-            {driverdetails.map(CreateDriverFile)}
-          </tbody>
+          <tbody>{driverdetails.map(CreateDriverFile)}</tbody>
         </table>
       </div>
     </div>
+    </div>
+    
   );
 }
 

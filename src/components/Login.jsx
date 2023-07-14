@@ -8,7 +8,7 @@ import { signInWithGogle } from '../firebase.js';
 const Login = () => {
     return (
 
-        <div className="float container">
+        <div className="float container page">
             <div className="float-child">
                 <div className="car">
                     <img src={Car} className="caro" />   

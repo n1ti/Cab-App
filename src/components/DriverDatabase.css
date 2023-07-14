@@ -1,5 +1,6 @@
-* {
+.page {
   background-color: #f1ddbf;
+  padding-left: 65px;
   /* outline: 1px solid red; */
 }
 

@@ -1,5 +1,5 @@
 // import background from "./gridbackground.svg";
-import { db } from "../Firebase.js";
+import { db } from "../firebase.js";
 import { collection, addDoc } from "firebase/firestore";
 import "./driverRegistration.css";
 import { useState, useEffect } from "react";

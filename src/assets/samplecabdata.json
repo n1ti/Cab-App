@@ -1,0 +1,9 @@
+{
+    "totalCabs": 5,
+    "cab":[["id", "Model", "Colour", "Liscence-Plate", "status"],
+                [69000, "Toyota Etios", "white", "KA 01 B6 2337", "1"],
+                [69001, "Toyota Innovva", "grey", "KA 01 B6 2337", "0"],
+                [69002, "BMW Sedan", "black", "KA 01 B6 2337", "1"],
+                [69003, "Range Rover", "black", "KA 01 B6 2337", "1"],
+                [69004, "Tata Indica", "red", "KA 01 B6 2337", "0"]]
+}
