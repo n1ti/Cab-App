@@ -9,7 +9,7 @@ import calendarIcon from '../assets/calendar-icon.svg';
 import profileIcon from '../assets/profile-icon.svg';
 
 const Sidebar = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   const handleToggle = () => {
     setCollapsed(!collapsed);

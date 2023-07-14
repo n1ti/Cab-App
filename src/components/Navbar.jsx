@@ -167,7 +167,7 @@ import logo from './logo.svg'
 import './Navbar.css'
 const Navbar = () => {
   return <div className='bar'>
-                <img src={logo} className="logo"/>
+                <a href='driver-database'><img src={logo} className="logo"/></a>
   </div>
 }
 
