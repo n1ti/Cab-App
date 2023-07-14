@@ -4,70 +4,64 @@ import { collection, addDoc, query, where, getDocs} from "firebase/firestore";
 import "./driverRegistration.css";
 import { useFormik } from "formik"
 import { driverSchema } from "./Validations/DriverValidation.js"
-import { toast, ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar.jsx";
 
-/*
-************TODO************
-5. Transfer this code to the dashboard section.
-****************************
-*/
-
 const DriverRegistration = () => {
-  const navigate = useNavigate();
-  const {values, errors, touched, isSubmitting, handleChange, handleSubmit, handleBlur} = useFormik ({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      phoneNumber: "",
-      emailId: "",
-      driverId: "",
-    },
-    validationSchema: driverSchema,
-    onSubmit : async (values, actions) => {
-      let currentdate = new Date();
-      try {
-        const q = query(
-          collection(db, "drivers"),
-          where("phoneNumber", "==", values.phoneNumber)
-        )
-        const qs = await getDocs(q)
-        if(qs.size === 0) {
-          const docRef = await addDoc(collection(db, "drivers"), {
-            firstName :  values.firstName,
-            lastName : values.lastName,
-            phoneNumber: values.phoneNumber,
-            emailId : values.emailId,
-            driverId : values.driverId,
-            registerationDate: currentdate.getDate() + "/" + (currentdate.getMonth()+1)  + "/" + currentdate.getFullYear() + ", " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds(),
-          });
-          if(docRef.id) {
-            toast.success('Driver Registered', {position: "top-right",
+    const navigate = useNavigate();
+    const {values, errors, touched, isSubmitting, handleChange, handleSubmit, handleBlur} = useFormik ({
+      initialValues: {
+        firstName: "",
+        lastName: "",
+        phoneNumber: "",
+        emailId: "",
+        driverId: "",
+      },
+      validationSchema: driverSchema,
+      onSubmit : async (values, actions) => {
+        let currentdate = new Date();
+        try {
+          const q = query(
+            collection(db, "drivers"),
+            where("phoneNumber", "==", values.phoneNumber)
+          )
+          const qs = await getDocs(q)
+          if(qs.size === 0) {
+            const docRef = await addDoc(collection(db, "drivers"), {
+              firstName :  values.firstName,
+              lastName : values.lastName,
+              phoneNumber: values.phoneNumber,
+              emailId : values.emailId,
+              driverId : values.driverId,
+              registerationDate: currentdate.getDate() + "/" + (currentdate.getMonth()+1)  + "/" + currentdate.getFullYear() + ", " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds(),
+            });
+            if(docRef.id) {
+              toast.success('Driver Registered', {position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",})
+              actions.resetForm();
+              navigate("/driver-database")
+            }
+          } else {
+            // alert("user already registered");
+            toast.warning('Driver Already Registered', {position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "colored",})
+            theme: "colored",});
             actions.resetForm();
             navigate("/driver-database")
           }
-        } else {
-          // alert("user already registered");
-          toast.warning('Driver Already Registered', {position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",});
-          actions.resetForm();
-          navigate("/driver-database")
-        }
       } catch (e) {
         console.log(e);
       }},

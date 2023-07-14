@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
+
+.trip-registration-container {
+    background-image: url('gridbackground.svg');
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+.trip-registration-form {
+    margin-top: 7rem;
+}
+.trip-details-form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1.3rem 3rem 2rem 3rem;
+    width: 612px;
+    height: min-content;
+    background-color: rgba(120, 147, 138, 0.3);
+    font-family: 'Lexend', sans-serif;
+}
+.trip-details-form > input {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #2E436B;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.trip-details-form > label {
+    font-family: 'Lexend', sans-serif;
+    background-color: transparent;
+    font-weight: 700;
+    align-self: flex-start;
+    margin: 0.3rem;
+    color: #2E436B;
+}
+.trip-details-form > h1 {
+    font-weight: 700;
+    font-family: 'Lexend', sans-serif;
+    font-size: 2.5rem;
+    background-color: transparent;
+    color: #2E436B;
+    margin-bottom: 0.7rem;
+}
+.trip-details-form > button {
+    background-color: #78938A;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.trip-details-form > button:disabled {
+    opacity: 0.5;
+}
+.trip-registration-form {
+    background: none;
+}
+input.input-error {
+    border: 3px solid red;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    display: flex;
+    align-self: flex-start;
+    padding: 0 0 0 15px;
+}

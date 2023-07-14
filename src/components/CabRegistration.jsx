@@ -4,18 +4,10 @@ import { collection, addDoc, query, where, getDocs} from "firebase/firestore";
 import "./cabRegistration.css";
 import { useFormik } from "formik"
 import { cabSchema } from "./Validations/CabValidation.js"
-import { toast, ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar.jsx";
-
-/*
-************TODO************
-5. Transfer this code to the dashboard section.
-****************************
-*/
-
-
 
 const CabRegistration = () => {
   const navigate = useNavigate();
