@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar.jsx";
 import DriverDataLine from "./DriverDataLine.jsx";
 import DriverData from "../assets/sampledriverdata.json";
 import "./DriverDatabase.css";
+import { Link } from "react-router-dom";
 
 function DriverDatabase() {
   const driverdetails = DriverData["driver"];
@@ -29,7 +30,7 @@ function DriverDatabase() {
       <div>
         <div className="heading">DRIVER DATABASE</div>
         <div className="addDriver">
-        <a href="/registerDriver"><button>Add Driver</button>{" "}</a>
+        <Link to="/registerDriver"><button>Add Driver</button>{" "}</Link>
         </div>
       </div>
       <div className="databasetable">

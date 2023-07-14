@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar.jsx";
 import CabDataLine from "./CabDataLine.jsx";
 import CabData from "../assets/samplecabdata.json";
 import "./CabDatabase.css";
+import { Link } from "react-router-dom";
 
 function CabDatabase() {
   const cabdetails = CabData["cab"];
@@ -29,7 +30,7 @@ function CabDatabase() {
       <div>
         <div className="heading">CAB DATABASE</div>
         <div className="addDriver">
-          <a href="/registerDriver"><button>Add Cab</button>{" "}</a>
+          <Link to="/registerCab"><button>Add Cab</button>{" "}</Link>
         </div>
       </div>
       <div className="databasetable">

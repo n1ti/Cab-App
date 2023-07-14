@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
 
-.driver-registration-container {
+.cab-registration-container {
     background-image: url('gridbackground.svg');
     min-height: 100vh;
     display: flex;
@@ -12,7 +12,7 @@
     justify-content: center;
     padding-bottom: 3rem;
 }
-.driver-details-form {
+.cab-details-form {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -23,7 +23,7 @@
     background-color: rgba(120, 147, 138, 0.3);
     font-family: 'Lexend', sans-serif;
 }
-.driver-details-form > input {
+.cab-details-form > input {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 0;
@@ -31,7 +31,7 @@
     color: #2E436B;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.driver-details-form > label {
+.cab-details-form > label {
     font-family: 'Lexend', sans-serif;
     background-color: transparent;
     font-weight: 700;
@@ -39,7 +39,7 @@
     margin: 0.3rem;
     color: #2E436B;
 }
-.driver-details-form > h1 {
+.cab-details-form > h1 {
     font-weight: 700;
     font-family: 'Lexend', sans-serif;
     font-size: 2.5rem;
@@ -47,7 +47,7 @@
     color: #2E436B;
     margin-bottom: 0.7rem;
 }
-.driver-details-form > button {
+.cab-details-form > button {
     background-color: #78938A;
     padding: 0.5rem;
     margin-top: 1rem;
@@ -56,10 +56,10 @@
     font-weight: 700;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.driver-details-form > button:disabled {
+.cab-details-form > button:disabled {
     opacity: 0.5;
 }
-.driver-registration-form {
+.cab-registration-form {
     background: none;
 }
 input.input-error {

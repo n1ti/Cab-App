@@ -12,6 +12,8 @@ import DriverRegistration from './components/DriverRegistration.jsx';
 import DriverDatabase from './components/DriverDatabase.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import CabDatabase from './components/CabDatabase.jsx';
+import CabRegistration from './components/CabRegistration.jsx'
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   return (
@@ -25,11 +27,13 @@ const App = () => {
           <Route path="/driverDeets" element={<DriverDeets />} />
           <Route path="/cabDeets" element={<CabDeets />} />
           <Route path="/registerDriver" element={<DriverRegistration/>} />
+          <Route path="/registerCab" element={<CabRegistration />} />
           <Route path="/dashboard" element={<Sidebar />} />
           <Route path="/driver-database" element={<DriverDatabase />} />
           <Route path="/cab-database" element={<CabDatabase />} />
         </Routes>
       </Router>
+      <ToastContainer />
       <Footer />
     </>
   )
