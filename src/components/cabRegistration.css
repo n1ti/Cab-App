@@ -12,6 +12,9 @@
     justify-content: center;
     padding-bottom: 3rem;
 }
+.cab-registration-form {
+    margin-top: 7rem;
+}
 .cab-details-form {
     display: flex;
     flex-direction: column;

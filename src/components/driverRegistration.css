@@ -12,6 +12,9 @@
     justify-content: center;
     padding-bottom: 3rem;
 }
+.driver-registration-form {
+    margin-top: 7rem;
+}
 .driver-details-form {
     display: flex;
     flex-direction: column;

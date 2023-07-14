@@ -3,6 +3,8 @@
   padding-left: 65px;
   position: relative;
   /* outline: 1px solid red; */
+  padding-top: 5rem;
+  height: 93vh;
 }
 
 .heading {
