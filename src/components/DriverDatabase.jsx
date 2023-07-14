@@ -33,7 +33,6 @@ function DriverDatabase() {
 
   function CreateDriverFile(driver, index) {
     const {
-      id,
       firstName,
       lastName,
       phoneNumber,
@@ -41,7 +40,7 @@ function DriverDatabase() {
       registerationDate,
       driverId,
     } = driver;
-  
+
     return (
       <DriverDataLine
         key={index}
@@ -67,7 +66,7 @@ function DriverDatabase() {
             </a>
           </div>
         </div>
-        <div className="databasetable">
+        <div className="databasetable datarows">
           <table className="rowProperties">
             <thead>
               <tr>
