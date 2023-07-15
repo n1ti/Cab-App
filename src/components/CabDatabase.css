@@ -117,7 +117,6 @@
 
 .icons {
   display: table-cell;
-  
 }
 
 .icons2 {
@@ -134,6 +133,7 @@
   overflow-y: scroll;
 }
 
-.inactiveBtn{
+.inactiveBtn {
   padding-left: 7px;
+  text-align: center;
 }

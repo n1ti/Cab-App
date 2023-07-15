@@ -78,7 +78,12 @@ function CabDatabase() {
                 <th className="tableheader registrationNumber">
                   License Plate
                 </th>
-                <th className="tableheader status">Status</th>
+                <th
+                  className="tableheader status"
+                  style={{ textAlign: "center" }}
+                >
+                  Status
+                </th>
                 <th className="tableheader op">Operation</th>
               </tr>
             </thead>

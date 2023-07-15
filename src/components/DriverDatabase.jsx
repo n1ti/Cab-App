@@ -74,7 +74,12 @@ function DriverDatabase() {
                 <th className="tableheader lname">Last Name</th>
                 <th className="tableheader phn">Phone Number</th>
                 <th className="tableheader emailid">Email ID</th>
-                <th className="tableheader status">Status</th>
+                <th
+                  className="tableheader status"
+                  style={{ textAlign: "center" }}
+                >
+                  Status
+                </th>
                 <th className="tableheader op">Operation</th>
               </tr>
             </thead>
