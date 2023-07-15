@@ -12,7 +12,7 @@ function CabDataLine(props) {
       <td className="tablerows carModel">{props.carModel}</td>
       <td className="tablerows registrationNumber">{props.registrationNumber}</td>
       {/* <td className="tablerows status">{props.registerationDate}</td> {/* Update the prop name here */}
-      <td className="tablerows status">
+      <td className="tablerows statushead">
         {props.status == 1 ? (
           <div className="activeBtn">Active</div>
         ) : (
@@ -22,7 +22,7 @@ function CabDataLine(props) {
       <td className="tablerows op">
         <div>
           <div className="icons">
-            <img src={EditProfileIcon} className="icons2" alt="Edit" />
+            <img src={EditProfileIcon} className="icons1" alt="Edit" />
           </div>
           <div className="icons">
             <img src={DeleteIcon} className="icons2" alt="Delete" />

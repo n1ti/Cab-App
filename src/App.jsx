@@ -1,20 +1,21 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
-import Landing from './components/Landing.jsx';
+import Landing from "./components/Landing.jsx";
 import Footer from "./components/Footer.jsx";
-import './App.css'
+import "./App.css";
 import Login from "./components/login.jsx";
-import AdminDash from './components/AdminDash.jsx';
-import DriverDeets from './components/DriverDeets.jsx';
-import CabDeets from './components/CabDeets.jsx'
-import DriverRegistration from './components/DriverRegistration.jsx';
+import AdminDash from "./components/AdminDash.jsx";
+import DriverDeets from "./components/DriverDeets.jsx";
+import CabDeets from "./components/CabDeets.jsx";
+import DriverRegistration from "./components/DriverRegistration.jsx";
 // import Dashboard from './components/Dashboard.jsx';
-import DriverDatabase from './components/DriverDatabase.jsx';
-import Sidebar from './components/Sidebar.jsx';
-import CabDatabase from './components/CabDatabase.jsx';
-import CabRegistration from './components/CabRegistration.jsx'
-import { ToastContainer } from 'react-toastify';
-import TripRegistration from './components/TripRegistration.jsx';
+import DriverDatabase from "./components/DriverDatabase.jsx";
+import Sidebar from "./components/Sidebar.jsx";
+import CabDatabase from "./components/CabDatabase.jsx";
+import CabRegistration from "./components/CabRegistration.jsx";
+import UserRequests from "./components/UserRequests.jsx";
+import TripRegistration from "./components/TripRegistration.jsx";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -27,18 +28,19 @@ const App = () => {
           <Route path="/adminDash" element={<AdminDash />} />
           <Route path="/driverDeets" element={<DriverDeets />} />
           <Route path="/cabDeets" element={<CabDeets />} />
-          <Route path="/registerDriver" element={<DriverRegistration/>} />
+          <Route path="/registerDriver" element={<DriverRegistration />} />
           <Route path="/registerCab" element={<CabRegistration />} />
           <Route path="/dashboard" element={<Sidebar />} />
           <Route path="/driver-database" element={<DriverDatabase />} />
           <Route path="/cab-database" element={<CabDatabase />} />
           <Route path="/registerTrip" element={<TripRegistration />} />
+          <Route path="/user-requests" element={<UserRequests />} />
         </Routes>
       </Router>
       <ToastContainer />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

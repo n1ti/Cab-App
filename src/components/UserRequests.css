@@ -1,7 +1,10 @@
 .page {
   background-color: #f1ddbf;
   padding-left: 65px;
+  position: relative;
   /* outline: 1px solid red; */
+  padding-top: 5rem;
+  height: 93vh;
 }
 
 .heading {
@@ -63,7 +66,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  text-align: center;
+  text-align: left;
 }
 .tablerows {
   background-color: #f6f3ed;
@@ -74,55 +77,29 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  text-align: left;
+}
+.tripid {
+  width: 20%;
+  padding-left: 2%;
+}
+.cname {
+  width: 25%;
+}
+.driverid {
+  width: 20%;
+}
+.cabid {
+  width: 20%;
+}
+.op {
+  width: 25%;
+  padding-right: 5%;
   text-align: center;
 }
 
-/* <th className="tableheader ID">Cab ID</th>
-  <th className="tableheader carBrand">Cab Brand</th>
-  <th className="tableheader carCapacity">Cab Capacity</th>
-  <th className="tableheader carModel">Cab Model</th>
-  <th className="tableheader registrationNumber">Lisence Plate</th>
-  <th className="tableheader status">Status</th>
-  <th className="tableheader op">Operation</th> */
-
-.ID {
-  width: 12%;
-  padding-left: 2%;
-}
-.carBrand {
-  width: 13%;
-}
-.carCapacity {
-  width: 10%;
-}
-.carModel {
-  width: 15%;
-}
-.status {
-  width: 10%;
-  /* padding-left: 20; */
-  /* padding-left: 10px; */
-}
-.registraionNumber {
-  width: 17%;
-}
-.op {
-  padding-right: 10%;
-  width: 9%;
-  padding-left: 10%;
-}
 .rowProperties {
   width: 100%;
-}
-
-.icons {
-  display: table-cell;
-  
-}
-
-.icons2 {
-  background-color: #f6f3ed;
-  padding-left: 20px;
 }
 
 .datarowoutlines {
@@ -130,10 +107,18 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.datarows {
-  overflow-y: scroll;
+.activeBtn {
+  border-radius: 20px;
+  background: #92ba92;
+  color: #325332;
+  width: 80%;
+}
+.activeBtn:hover {
+  background: #f6f3ed;
+  border: 3px solid #325332;
+  color: #325332;
 }
 
-.inactiveBtn{
-  padding-left: 7px;
+.datarows {
+  overflow-y: scroll;
 }

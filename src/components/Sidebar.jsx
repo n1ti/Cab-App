@@ -44,7 +44,7 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="pop">
+            <a href="/user-requests" className="pop">
               <img src={requestIcon} alt="User Requests" className="icon" />
               {!collapsed && <span>User Requests</span>}
             </a>
