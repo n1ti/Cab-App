@@ -5,12 +5,12 @@ import { useFormik } from "formik"
 import { tripSchema } from "./Validations/TripValidation.js"
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar.jsx";
 import './tripRegistration.css'
 
 const TripRegistration = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const {values, errors, touched, isSubmitting, handleChange, handleSubmit, handleBlur} = useFormik ({
       initialValues: {
         tripId: "",
@@ -21,22 +21,37 @@ const TripRegistration = () => {
       validationSchema: tripSchema,
       onSubmit : async (values, actions) => {
         try {
-          const q = query(
+          const trips_driverId_query = query(
             collection(db, "trips"),
             where("driverId", "==", values.driverId)
           )
-          const cq = query(
+          const trips_carId_query = query(
             collection(db, "trips"), 
             where("carId", "==", values.carId)
           )
-          const tq = query(
+          const trips_tripId_query = query(
             collection(db, "trips"),
             where("tripId", "==", values.tripId)
           )
-          const cqs = await getDocs(cq)
-          const qs = await getDocs(q)
-          const tqs = await getDocs(tq)
-          if((tqs.size === 0) && ((qs.empty || ((!qs.empty)&&(qs.docs[0].data().status > 1)))&&(cqs.empty || ((!cqs.empty)&&(cqs.docs[0].data().status > 1))))) {
+          const ongoingTrips_driverId_query = query(
+            collection(db, "ongoingTrips"),
+            where("driverId", "==", values.driverId)
+          )
+          const ongoingTrips_carId_query = query(
+            collection(db, "ongoingTrips"),
+            where("carId", "==", values.carId)
+          )
+          const ongoingTrips_tripId_query = query(
+            collection(db, "ongoingTrips"),
+            where("tripId", "==", values.tripId)
+          )
+          const trips_carId_query_snapshot = await getDocs(trips_carId_query)
+          const trips_driverId_query_snapshot = await getDocs(trips_driverId_query)
+          const trips_tripId_query_snapshot = await getDocs(trips_tripId_query)
+          const ongoingTrips_carId_query_snapshot = await getDocs(ongoingTrips_carId_query)
+          const ongoingTrips_driverId_query_snapsnot = await getDocs(ongoingTrips_driverId_query)
+          const ongoingTrips_tripId_query_snapshot = await getDocs(ongoingTrips_tripId_query)
+          if(trips_tripId_query_snapshot.empty && trips_driverId_query_snapshot.empty && trips_carId_query_snapshot.empty && ongoingTrips_carId_query_snapshot.empty && ongoingTrips_driverId_query_snapsnot.empty && ongoingTrips_tripId_query_snapshot.empty) {
             const docRef = await addDoc(collection(db, "trips"), {
               tripId :  values.tripId,
               customerName : values.customerName,
@@ -54,11 +69,11 @@ const TripRegistration = () => {
               progress: undefined,
               theme: "colored",})
               actions.resetForm();
-            //   navigate("/driver-database")
+              navigate("/user-requests")
             }
           } else {
             // alert("user already registered");
-            if(tqs.size !== 0) {
+            if(!trips_tripId_query_snapshot.empty || !ongoingTrips_tripId_query_snapshot.empty) {
                 toast.warning('Trip already exists', {position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -68,7 +83,7 @@ const TripRegistration = () => {
                 progress: undefined,
                 theme: "colored",});
             }
-            if((!qs.empty)&&(qs.docs[0].data().status < 2)) {
+            if(!trips_driverId_query_snapshot.empty || !ongoingTrips_driverId_query_snapsnot.empty) {
                 toast.warning('Driver is currently assigned another trip', {position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -78,7 +93,7 @@ const TripRegistration = () => {
                 progress: undefined,
                 theme: "colored",});
             }
-            if((!cqs.empty)&&(cqs.docs[0].data().status < 2)) {
+            if(!trips_carId_query_snapshot.empty || !ongoingTrips_carId_query_snapshot.empty) {
                 toast.warning('Cab is currently assigned another trip', {position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
