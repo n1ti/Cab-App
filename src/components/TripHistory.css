@@ -79,39 +79,27 @@
   line-height: normal;
   text-align: left;
 }
-.ID {
-  width: 12%;
+.tripid {
+  width: 20%;
   padding-left: 2%;
 }
-.fname {
-  width: 13%;
+.cname {
+  width: 25%;
 }
-.lname {
-  width: 17%;
+.driverid {
+  width: 20%;
 }
-.phn {
-  width: 15%;
-}
-.emailid {
-  width: 8%;
-}
-.status {
-  width: 8%;
+.cabid {
+  width: 20%;
 }
 .op {
+  width: 25%;
   padding-right: 5%;
-  width: 9%;
+  text-align: center;
 }
+
 .rowProperties {
   width: 100%;
-}
-
-.icons {
-  display: table-cell;
-}
-
-.icons2 {
-  background-color: #f6f3ed;
 }
 
 .datarowoutlines {
@@ -123,16 +111,12 @@
   border-radius: 20px;
   background: #92ba92;
   color: #325332;
-  margin-left: 15%;
   width: 80%;
 }
-
-.inactiveBtn {
-  border-radius: 20px;
-  background: #ba9292;
-  color: #533232;
-  width: 80%;
-  margin-left: 15%;
+.activeBtn:hover {
+  background: #f6f3ed;
+  border: 3px solid #325332;
+  color: #325332;
 }
 
 .datarows {
