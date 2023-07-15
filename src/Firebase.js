@@ -32,7 +32,7 @@ const provider = new GoogleAuthProvider();
 
 export const signInWithGogle = () => {
     signInWithPopup(auth, provider).then((result) => {
-        window.location.href = "./driver-database";
+        window.location.href = "./dashboard";
     }).catch((error)=>{
         console.log(error);
     })

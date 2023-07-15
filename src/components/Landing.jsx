@@ -21,7 +21,7 @@ const Landing = () => {
         //     <img src={Car} className="car" />
         //   </div>
         // </div>
-        <div className="page">
+        <div className="page-landing">
             <div className="float container">
             <div class="float-child">
                 <div className="maintext"><p>One stop solution to manage <br></br> your Cabs and Drivers.</p></div>
