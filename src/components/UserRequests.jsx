@@ -27,31 +27,32 @@ function UserRequests() {
     fetchData();
   }, []);
 
-  const handleStartTrip = async (tripId) => {
+  const handleEndTrip = async (tripId) => {
     try {
       const db = getFirestore();
-      const tripRef = collection(db, "trips");
+      const tripRef = collection(db, "ongoingTrips");
       const snapshot = await getDocs(tripRef);
       const trips = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-      const tripData = trips.find((trip) => trip.id === tripId);
-
+      const tripData = trips.find((trip) => trip.tripId === tripId);
+  
       if (tripData) {
-        // Add trip to ongoingTrips collection
-        const ongoingTripsRef = collection(db, "ongoingTrips");
-        await addDoc(ongoingTripsRef, tripData);
-
-        // Delete trip from trips collection
-        const tripDocRef = doc(db, "trips", tripId);
+        // Add trip to TripHistory collection
+        const tripHistoryRef = collection(db, "TripHistory");
+        await addDoc(tripHistoryRef, tripData);
+  
+        // Delete trip from ongoingTrips collection
+        const tripDocRef = doc(db, "ongoingTrips", tripData.id);
         await deleteDoc(tripDocRef);
-
-        // Update the userRequests state to reflect the changes
-        const updatedRequests = userRequests.filter((request) => request.id !== tripId);
-        setUserRequests(updatedRequests);
+  
+        // Update the ongoingTrips state to reflect the changes
+        const updatedTrips = ongoingTrips.filter((trip) => trip.tripId !== tripId);
+        setOngoingTrips(updatedTrips);
       }
     } catch (error) {
-      console.log("Error starting trip: ", error);
+      console.log("Error ending trip: ", error);
     }
   };
+  
 
   return (
     <div>

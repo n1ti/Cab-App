@@ -1,15 +1,125 @@
-* {
-    /* outline: 1px solid red;  */
-}
-
-.icon2{
-    padding-top: 15%;
-    padding-left: 23%;
-}
-.icon1{
-    padding-top: 20%;
-    padding-left: 30%;
-}
-.blacktext{
-    color: black;
-}
+.page {
+    background-color: #f1ddbf;
+    padding-left: 65px;
+    position: relative;
+    /* outline: 1px solid red; */
+    padding-top: 5rem;
+    height: 93vh;
+  }
+  
+  .heading {
+    display: inline-block;
+    color: #2e436b;
+    font-family: Lexend;
+    font-size: 2.5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 2%;
+    padding-top: 1%;
+    height: fit-content;
+    width: fit-content;
+  }
+  
+  .addDriver {
+    display: inline-block;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    vertical-align: middle;
+    background-color: #78938a;
+    height: 1.7vw;
+    width: 7vw;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: Lexend;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.7vw;
+  }
+  
+  .addDriver:active {
+    background-color: #fff;
+    border: 2px solid #78938a;
+    color: #78938a;
+    text-align: center;
+    line-height: 1.7vw;
+  }
+  
+  .databasetable {
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-right: 2%;
+    height: 72vh;
+    border: 5px solid #78938a;
+    background: #f1ddbf;
+  }
+  
+  .tableheader {
+    background: rgba(120, 147, 138, 0.7);
+    height: 4vw;
+    color: #fff;
+    font-family: Lexend;
+    font-size: 1.4vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+  }
+  .tablerows {
+    background-color: #f6f3ed;
+    height: 4vw;
+    color: #2e436b;
+    font-family: Lexend;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+  }
+  .tripid {
+    width: 20%;
+    padding-left: 2%;
+  }
+  .cname {
+    width: 25%;
+  }
+  .driverid {
+    width: 20%;
+  }
+  .cabid {
+    width: 20%;
+  }
+  .op1 {
+    width: 25%;
+    padding-right: 5%;
+    text-align: center;
+  }
+  
+  .rowProperties {
+    width: 100%;
+  }
+  
+  .datarowoutlines {
+    border: 1px solid #78938a;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .activeBtn {
+    border-radius: 20px;
+    background: #92ba92;
+    color: #325332;
+    width: 80%;
+  }
+  .activeBtn:hover {
+    background: #f6f3ed;
+    border: 3px solid #325332;
+    color: #325332;
+  }
+  
+  .datarows {
+    overflow-y: scroll;
+  }
+  
