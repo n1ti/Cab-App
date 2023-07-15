@@ -1,24 +1,31 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar.jsx";
 import TripLine from "./TripLines.jsx";
-import TripsInfo from "../assets/sampletripdata.json";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { firebaseConfig } from "../firebase.js";
 import "./TripHistory.css";
 
 function TripHistory() {
-  const trips = TripsInfo["trips"];
-  function CreateTripFile(trip, index) {
-    const { tripid, cname, driverid, cabid } = trip;
+  const [ongoingTrips, setOngoingTrips] = useState([]);
 
-    return (
-      <TripLine
-        key={index}
-        tripid={tripid}
-        cname={cname}
-        driverid={driverid}
-        cabid={cabid}
-      />
-    );
-  }
+  useEffect(() => {
+    initializeApp(firebaseConfig);
+    const db = getFirestore();
+
+    const fetchOngoingTrips = async () => {
+      try {
+        const tripRef = collection(db, "ongoingTrips");
+        const snapshot = await getDocs(tripRef);
+        const tripsData = snapshot.docs.map((doc) => doc.data());
+        setOngoingTrips(tripsData);
+      } catch (error) {
+        console.log("Error fetching ongoing trips: ", error);
+      }
+    };
+
+    fetchOngoingTrips();
+  }, []);
 
   return (
     <div>
@@ -37,11 +44,22 @@ function TripHistory() {
                 <th className="tableheader cabid">Cab ID</th>
               </tr>
             </thead>
-            <tbody>{trips.map(CreateTripFile)}</tbody>
+            <tbody>
+              {ongoingTrips.map((trip, index) => (
+                <TripLine
+                  key={index}
+                  tripid={trip.tripId}
+                  cname={trip.customerName}
+                  driverid={trip.driverId}
+                  cabid={trip.carId}
+                />
+              ))}
+            </tbody>
           </table>
         </div>
       </div>
     </div>
   );
 }
+
 export default TripHistory;

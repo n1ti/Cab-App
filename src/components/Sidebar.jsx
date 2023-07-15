@@ -26,7 +26,7 @@ const Sidebar = () => {
       <nav>
         <ul>
           <li>
-            <a href="#" className="pop">
+            <a href="/dashboard" className="pop">
               <img src={dashboardIcon} alt="Dashboard" className="icon" />
               {!collapsed && <span>Dashboard</span>}
             </a>
@@ -50,7 +50,7 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="pop">
+            <a href="/trip-history" className="pop">
               <img src={calendarIcon} alt="Trip History" className="icon" />
               {!collapsed && <span>Trip History</span>}
             </a>

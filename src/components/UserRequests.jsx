@@ -27,7 +27,7 @@ function UserRequests() {
     fetchData();
   }, []);
 
-  const handleEndTrip = async (tripId) => {
+  const handleStartTrip = async (tripId) => {
     try {
       const db = getFirestore();
       const tripRef = collection(db, "ongoingTrips");
