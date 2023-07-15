@@ -93,20 +93,23 @@
   width: 13%;
 }
 .carCapacity {
-  width: 17%;
+  width: 10%;
 }
 .carModel {
   width: 15%;
 }
 .status {
-  width: 12%;
+  width: 10%;
+  /* padding-left: 20; */
+  /* padding-left: 10px; */
 }
 .registraionNumber {
-  width: 10%;
+  width: 17%;
 }
 .op {
-  padding-right: 5%;
+  padding-right: 10%;
   width: 9%;
+  padding-left: 10%;
 }
 .rowProperties {
   width: 100%;
@@ -114,10 +117,12 @@
 
 .icons {
   display: table-cell;
+  
 }
 
 .icons2 {
   background-color: #f6f3ed;
+  padding-left: 20px;
 }
 
 .datarowoutlines {
@@ -127,4 +132,8 @@
 
 .datarows {
   overflow-y: scroll;
+}
+
+.inactiveBtn{
+  padding-left: 7px;
 }
