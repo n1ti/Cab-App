@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { db } from "../Firebase.js";
+import { db } from "../firebase.js";
 import { collection, addDoc, query, where, getDocs} from "firebase/firestore";
 import { useFormik } from "formik"
 import { tripSchema } from "./Validations/TripValidation.js"

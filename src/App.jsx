@@ -8,7 +8,6 @@ import AdminDash from "./components/AdminDash.jsx";
 import DriverDeets from "./components/DriverDeets.jsx";
 import CabDeets from "./components/CabDeets.jsx";
 import DriverRegistration from "./components/DriverRegistration.jsx";
-// import Dashboard from './components/Dashboard.jsx';
 import DriverDatabase from "./components/DriverDatabase.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import CabDatabase from "./components/CabDatabase.jsx";
@@ -18,6 +17,7 @@ import TripRegistration from "./components/TripRegistration.jsx";
 
 import TripHistory from "./components/TripHistory.jsx";
 import { ToastContainer } from "react-toastify";
+import Dashboard from "./components/Dashboard.jsx";
 
 const App = () => {
   return (
@@ -32,11 +32,11 @@ const App = () => {
           <Route path="/cabDeets" element={<CabDeets />} />
           <Route path="/registerDriver" element={<DriverRegistration />} />
           <Route path="/registerCab" element={<CabRegistration />} />
-          <Route path="/dashboard" element={<Sidebar />} />
           <Route path="/driver-database" element={<DriverDatabase />} />
           <Route path="/cab-database" element={<CabDatabase />} />
           <Route path="/registerTrip" element={<TripRegistration />} />
           <Route path="/user-requests" element={<UserRequests />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/trip-history" element={<TripHistory />} />
         </Routes>
       </Router>
