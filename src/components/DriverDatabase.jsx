@@ -15,7 +15,6 @@ function DriverDatabase() {
     const fetchData = async () => {
       const db = getFirestore();
       const colRef = collection(db, "drivers");
-
       try {
         const snapshot = await getDocs(colRef);
         const drivers = snapshot.docs.map((doc) => ({

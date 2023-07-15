@@ -93,10 +93,10 @@
   width: 15%;
 }
 .emailid {
-  width: 22%;
+  width: 8%;
 }
 .status {
-  width: 12%;
+  width: 8%;
 }
 .op {
   padding-right: 5%;
@@ -124,14 +124,14 @@
   background: #92ba92;
   color: #325332;
   margin-left: 15%;
-  width: 70%;
+  width: 80%;
 }
 
 .inactiveBtn {
   border-radius: 20px;
   background: #ba9292;
   color: #533232;
-  width: 70%;
+  width: 80%;
   margin-left: 15%;
 }
 

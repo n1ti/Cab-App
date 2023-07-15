@@ -74,14 +74,14 @@ function UserRequests() {
                 <th className="tableheader cname">Customer Name</th>
                 <th className="tableheader driverid">Driver ID</th>
                 <th className="tableheader cabid">Cab ID</th>
-                <th className="tableheader op">Operation</th>
+                <th className="tableheader start-trip">Operation</th>
               </tr>
             </thead>
             <tbody>
               {userRequests.map((request) => (
                 <UserReqLine
                   key={request.id}
-                  tripId={request.id}
+                  tripId={request.tripId}
                   cname={request.customerName}
                   driverId={request.driverId}
                   cabId={request.carId}

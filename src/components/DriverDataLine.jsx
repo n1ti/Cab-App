@@ -2,8 +2,34 @@ import React from "react";
 import DeleteIcon from "../assets/delete.svg";
 import EditProfileIcon from "../assets/editprofile.svg";
 import "./DriverDatabase.css";
+import { db } from "../Firebase.js";
+import { collection, query, where, getDocs} from "firebase/firestore";
+import { useEffect, useState } from "react";
 
 function DriverDataLine(props) {
+  const [status, setStatus] = useState(false)
+  useEffect(() => {
+    const queryStatus = async () => {
+      try {
+        const trips_driverId_query = query(
+          collection(db, "trips"),
+          where("driverId", "==", props.id)
+        )
+        const ongoingTrips_driverId_query = query(
+          collection(db, "ongoingTrips"),
+          where("driverId", "==", props.id)
+        )
+        const trips_driverId_query_snapshot = await getDocs(trips_driverId_query)
+        const ongoingTrips_driverId_query_snapsnot = await getDocs(ongoingTrips_driverId_query)
+        if(trips_driverId_query_snapshot.empty && ongoingTrips_driverId_query_snapsnot.empty) {
+          setStatus(true)
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    queryStatus();
+  })
   return (
     <tr className="datarowoutlines">
       <td className="tablerows ID">{props.id}</td>
@@ -12,7 +38,7 @@ function DriverDataLine(props) {
       <td className="tablerows phn">{props.phonenumber}</td>
       <td className="tablerows emailid">{props.emailid}</td>
       <td className="tablerows status">
-        {props.status == 1 ? (
+        {status == false ? (
           <div className="activeBtn">Active</div>
         ) : (
           <div className="inactiveBtn">Inactive</div>
