@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { db } from "../Firebase.js";
 import { collection, addDoc, query, where, getDocs} from "firebase/firestore";
 import { useFormik } from "formik"
@@ -94,8 +94,10 @@ const TripRegistration = () => {
       } catch (e) {
         console.log(e);
       }},
-
   })
+  useEffect(() => {
+    console.log(values.tripId);
+  },[values.tripId])
   return (
     <>
     <Sidebar /> 
