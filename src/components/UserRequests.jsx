@@ -30,29 +30,28 @@ function UserRequests() {
   const handleStartTrip = async (tripId) => {
     try {
       const db = getFirestore();
-      const tripRef = collection(db, "ongoingTrips");
+      const tripRef = collection(db, "trips");
       const snapshot = await getDocs(tripRef);
       const trips = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-      const tripData = trips.find((trip) => trip.tripId === tripId);
-  
+      const tripData = trips.find((trip) => trip.id === tripId);
+
       if (tripData) {
-        // Add trip to TripHistory collection
-        const tripHistoryRef = collection(db, "TripHistory");
-        await addDoc(tripHistoryRef, tripData);
-  
-        // Delete trip from ongoingTrips collection
-        const tripDocRef = doc(db, "ongoingTrips", tripData.id);
+        // Add trip to ongoingTrips collection
+        const ongoingTripsRef = collection(db, "ongoingTrips");
+        await addDoc(ongoingTripsRef, tripData);
+
+        // Delete trip from trips collection
+        const tripDocRef = doc(db, "trips", tripId);
         await deleteDoc(tripDocRef);
-  
-        // Update the ongoingTrips state to reflect the changes
-        const updatedTrips = ongoingTrips.filter((trip) => trip.tripId !== tripId);
-        setOngoingTrips(updatedTrips);
+
+        // Update the userRequests state to reflect the changes
+        const updatedRequests = userRequests.filter((request) => request.id !== tripId);
+        setUserRequests(updatedRequests);
       }
     } catch (error) {
-      console.log("Error ending trip: ", error);
+      console.log("Error starting trip: ", error);
     }
   };
-  
 
   return (
     <div>
@@ -74,14 +73,14 @@ function UserRequests() {
                 <th className="tableheader cname">Customer Name</th>
                 <th className="tableheader driverid">Driver ID</th>
                 <th className="tableheader cabid">Cab ID</th>
-                <th className="tableheader start-trip">Operation</th>
+                <th className="tableheader op1">Operation</th>
               </tr>
             </thead>
             <tbody>
               {userRequests.map((request) => (
                 <UserReqLine
                   key={request.id}
-                  tripId={request.tripId}
+                  tripId={request.id}
                   cname={request.customerName}
                   driverId={request.driverId}
                   cabId={request.carId}
